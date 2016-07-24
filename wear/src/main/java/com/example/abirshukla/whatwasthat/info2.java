@@ -5,13 +5,19 @@ import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.TextView;
 
-public class info2 extends Activity {
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+
+public class info2 extends Activity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
     TextView textView;
     String link;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +27,7 @@ public class info2 extends Activity {
         Bundle c = getIntent().getExtras();
         String code = c.getString("code");
         String show = "";
+
         link = "";
         link = c.getString("link");
         int index = code.indexOf("<h1 itemprop=\"name\"");
@@ -76,7 +83,6 @@ public class info2 extends Activity {
             getApplicationContext().startActivity(intent);
         }
     }
-
     public void onDestroy() {
 
         super.onDestroy();
@@ -85,4 +91,18 @@ public class info2 extends Activity {
     }
 
 
+    @Override
+    public void onConnected(@Nullable Bundle bundle) {
+
+    }
+
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
 }

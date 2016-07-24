@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/abirshukla/WhatWasThat/wear/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="24.0.0"
+        sha1="bf7d6c8fdf06870c57cccc3cea325e3720b06c91">
+        <dex dex="/Users/abirshukla/WhatWasThat/wear/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_877b52e5538df4d32770fc9e37c4d3efd68c325b/classes.dex" />
+    </item>
+
+</items>
